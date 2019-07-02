@@ -5,9 +5,13 @@ const app = express();
 
 const port = 5000;
 
-app.use(streetController);
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 // para poder usar o do html
-app.use(express.static(__dirname + "/public"));
+app.use(streetController);
 
 app.listen(port, () => {
 
