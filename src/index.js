@@ -10,7 +10,6 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-// para poder usar o do html
 app.use(streetController);
 
 app.listen(port, () => {

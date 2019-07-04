@@ -2,14 +2,14 @@ const addressClient = require("../clients/address.clients");
 
 const addressService = () => {
 
-  const streetByCep = (cep) => {
+  const addressByCep = (cep) => {
 
-    return addressClient.streetByCep(cep);
+    return addressClient.addressByCep(cep);
 
   };
 
   return {
-    streetByCep,
+    addressByCep,
   };
 
 };

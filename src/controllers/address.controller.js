@@ -8,7 +8,7 @@ const addressController = () => {
   router.get("/address/cep/:cep", async (req, res) => {
     try {
       const cep = req.params.cep;
-      const result = await addressService.streetByCep(cep);
+      const result = await addressService.addressByCep(cep);
       res.send(result);
     
     } catch (error) {

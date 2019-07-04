@@ -5,7 +5,7 @@ const BASE_API = "viacep.com.br/ws/";
 
 const addressClient = () => {
 
-  const streetByCep = async (cep) => {
+  const addressByCep = async (cep) => {
 
     const streetResponse = await superagent.get(`${BASE_API}${cep}/json/`);
 
@@ -21,7 +21,7 @@ const addressClient = () => {
   };
 
   return {
-    streetByCep,
+    addressByCep,
   };
 };
 
